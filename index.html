@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>sntsolution</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" >
+
+
+	
+	
+    <style>
+        /* reset */
+        * {margin:0; padding:0; }
+        *, *::after, *::before {box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+      
+        /* nav */
+       /*  #nav {position: fixed; left: 0; top: 0px; width: 100%; height: 61px; z-index: 1000; background-color: rgba(255,255,255,0.3); transition: all 0.3s ease;}
+        #nav.on {position: fixed; top: -61px;}
+        #nav h1 {float: left; color: #000; font-size: 40px; padding: 5px 5px 5px 15px; font-family: 'Abel' } */
+         #nav       {
+            height: 61px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            font-size: 11pt;
+            font-family: 'PT Sans', Arial, Sans-serif;
+            font-weight: bold;
+            position: fixed;
+            z-index:5;
+            
+        }
+        #nav .logo a{background: url(./img/logo_c.png)no-repeat;}
+        #nav ul{
+            padding: 0;
+            margin-right: 0px;
+            float: right;
+            width: 700px;
+            height: 40px;
+        }
+        
+
+
+        #nav li{
+            display: inline;
+            float: left;
+        }
+        #nav a{
+            color: #fff;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            text-shadow: 1px 1px 0px #283744;
+        }
+        #nav li a{
+           
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+     
+        #nav a:hover, nav a:active{
+            background-color: #8c99a4;
+        }
+        #nav a#pull{
+            display: none;
+        }
+
+        /*Styles for screen 600px and lower*/
+        @media only screen and (max-width : 600px) {
+            #nav {
+                border-bottom: 0;
+                height: auto;
+            }
+            #nav ul {
+                display: none;
+                height: auto;
+            }
+            #nav a {
+                text-align: left;
+                width: 100%;
+                text-indent: 25px;
+            }
+            #nav a#pull {
+                display: block;
+                background-color: #283744;
+                width: 100%;
+                position: relative;
+            }
+            #nav a#pull:after {
+                content:"";
+                background: url('nav-icon.png') no-repeat;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+            }
+            #nav li {
+                display: block;
+                float: none;
+                width: 100%;
+            }
+            #nav li a {
+                border-bottom: 1px solid #576979;
+            }
+        }
+        /* contents */
+        #contents {text-align: center; color: #fff;}
+        
+        /* container */
+        .container {width: 1200px; margin: 0 auto;}
+        
+        /* section */
+        /* .section.s1 {background-color: #d0cfc5;}
+        .section.s2 {background-color: #ccc;}
+        .section.s3 {background-color: #ddd;}
+        .section.s4 {background-color: #eee;}
+        .section.s5 {background-color: #ddd;}
+        .section.s6 {background-color: #ccc;} */
+        .section.s1 {background-color: #fff;}
+        .section.s2 {background-color: #fff;}
+        .section.s3 {background-color: #fff;}
+        .section.s4 {background-color: #fff;}
+        .section.s5 {background-color: #fff;}
+        .section.s6 {background-color: #fff;}
+        footer{height:500px; background-color: #fff;}
+		
+        .section.s1 {position: relative; overflow: hidden; text-align: center;}
+        .section.s1 .sec1_text {padding: 15vw 5vw 10vw 5vw; font-size: 6vw; line-height: 1.2; margin: auto; color: #141417; font-family: 'Noto Sans KR', sans-serif; }
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+        .text {
+        fill: none;
+        stroke-width: 3;
+        stroke-linejoin: round;
+        stroke-dasharray: 70 330;
+        stroke-dashoffset: 0;
+        -webkit-animation: stroke 6s infinite linear;
+        animation: stroke 6s infinite linear;
+        }
+        .text:nth-child(5n + 1) {
+        stroke: #a5f4aa;
+        -webkit-animation-delay: -1.2s;
+        animation-delay: -1.2s;
+        }
+        .text:nth-child(5n + 2) {
+        stroke: #feed02;
+        -webkit-animation-delay: -2.4s;
+        animation-delay: -2.4s;
+        }
+        .text:nth-child(5n + 3) {
+        stroke: #E9F1DF;
+        -webkit-animation-delay: -3.6s;
+        animation-delay: -3.6s;
+        }
+        .text:nth-child(5n + 4) {
+        stroke: #56D9CD;
+        -webkit-animation-delay: -4.8s;
+        animation-delay: -4.8s;
+        }
+        .text:nth-child(5n + 5) {
+        stroke: #2ea7e0;
+        -webkit-animation-delay: -6s;
+        animation-delay: -6s;
+        }
+
+        @-webkit-keyframes stroke {
+        100% {
+            stroke-dashoffset: -400;
+        }
+        }
+        @keyframes stroke {
+        100% {
+            stroke-dashoffset: -400;
+        }
+        }
+        /* Other styles */
+        /* html, body {
+        height: 100%;
+        }
+        */
+        body {
+        background: #fff;
+        background-size: .2em 100%;
+        font: 5em/1 Open Sans, Impact;
+        text-transform: uppercase;
+        margin: 0;
+        }
+
+        svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        }
+
+
+
+
+
+
+
+
+        .section {overflow: hidden; flex-direction: row; display: flex; flex-wrap: wrap; align-items: center; color: #141417; height: 100vh; min-height: 600px; font-family: 'Poppins', sans-serif;}
+        .section .sec_text {width: 50vw; font-size: 5vw; line-height: 1.2; text-align: left; padding: 0 0 0 2em;}
+        .section .sec_text.title_right {margin-right:-15vw;}
+        .section .sec_img {width: 50vw; position: relative;}
+        .section .sec_img.title_right {margin-right:-15vw;}
+        .section img {width: 100%;}
+        
+        .section .rectangle{flex: none; width:40vw; height: 50vw;  position: absolute; z-index: 3;}
+        .section .rectangle.r2{margin:5vw 0 0 -13vw; background-color: rgba(54, 169, 225, 0.4);}
+        .section .rectangle.r3{height: 60vw; margin:0 15vw;background-color: rgba(254, 238, 4, 0.4);}
+        .section .rectangle.r6{margin:-5vw 0 0 0vw;background-color: rgba(165, 244, 170, 0.4);}
+
+        .section .sec_text {flex: none; position: relative; z-index: 2; display: inline-block; /* white-space: nowrap; */}
+        .section .sec_text .st1 {font-size:4vw; } 
+        .section .sec_text .st2 {font-weight: 300; font-size:3vw; }
+        .section .sec_text .st3 a{width:6vw; height:3vw; font-weight: 200; font-size:1vw; color:#000 line-height: 3vw;   text-align: center;}
+        .section .sec_text .st3 {width:6vw; height:3vw; font-weight: 200; font-size:1vw; line-height: 3vw; border:1px solid #000; border-radius: 20%;text-align: center;}
+
+		
+    </style>
+</head>
+<body>
+  <!--   <nav id="nav">
+        <div class="logo">SnT Solution</div>
+    </nav> -->
+    <nav id="nav">
+        
+        <ul class="clearfix">
+           <li class="on"><a href="#">Home</a></li>
+           
+           <li><a href="#">How-to</a></li>
+           <li><a href="#">Icons</a></li>
+           <li><a href="#">Design</a></li>
+           <!-- <li><a href="#">Web 2.0</a></li>
+           <li><a href="#">Tools</a></li> -->
+        </ul>
+        <a id="pull" href="#">Menu</a>
+    </nav>
+    <main>
+        <section class="section s1">
+            <svg viewBox="0 0 600 300">
+
+                <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="50%" dy=".35em">SnT Soultion</text>
+                </symbol>
+                
+                <use class="text" xlink:href="#s-text"></use>
+                <use class="text" xlink:href="#s-text"></use>
+                <use class="text" xlink:href="#s-text"></use>
+                <use class="text" xlink:href="#s-text"></use>
+                <use class="text" xlink:href="#s-text"></use>
+                </svg>
+        </section>
+        <!-- //section1 -->
+        
+        <section class="section s2">
+            <h2 class="sec_text">
+                
+                <div class="st1 scrolled1">가치 창조</br>함께 성장</div>
+                <div class="st2 scrolled2">innovation</br> innovation</div>
+                <div class="st3 scrolled3"><a href="#">자세히보기</a></div>
+                
+            </h2>
+            <figure class="sec_img title_right">
+            <div class="rectangle r2"></div>
+            <div class="si1 scrolled3"><img src="./img/slide1.png" alt=""></div>
+                
+            </figure>
+        </section>
+        <!-- //section2 -->
+        
+        <section class="section s3">
+            <figure class="sec_img">
+                <div class="rectangle r3"></div>
+                <div class="si1 scrolled3"><img src="./img/slide2.png" alt=""></div>
+            </figure>
+            <h2 class="sec_text title_right">
+                
+                <div class="st1 scrolled1">가치를 </br>창조하며</div>
+                <div class="st2 scrolled2">innovation</br> innovation</div>
+                <div class="st3 scrolled3"><a href="#">자세히보기</a></div>
+            </h2>
+        </section> 
+        <!-- //section3 -->
+        
+        <!-- <section class="section s4">
+            <h2 class="sec_text">
+                <div class="rectangle r4"></div>
+                <div class="st1 scrolled1">가치를 창조하며</div>
+                <div class="st2 scrolled2">innovation innovation</div>
+            </h2>
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="https://tympanus.net/Development/BlockRevealers/img/3.jpg" alt=""></div>
+            </figure>
+        </section> -->
+        <!-- //section4 -->
+        
+        <!-- <section class="section s5">
+            <figure class="sec_img">
+                <div class="si1 scrolled3"><img src="https://tympanus.net/Development/BlockRevealers/img/4.jpg" alt=""></div>
+            </figure>
+            <h2 class="sec_text title_left">
+                <div class="st1 scrolled1">가치를 창조하며</div>
+                <div class="st2 scrolled2">innovation innovation</div>
+            </h2>
+        </section> -->
+        <!-- //section5 -->
+        
+        <section class="section s6">
+            <h2 class="sec_text">
+                
+                <div class="st1 scrolled1">가치를 </br>창조하며</div>
+                <div class="st2 scrolled2">innovation</br> innovation</div>
+                <div class="st3 scrolled3"><a href="#">자세히보기</a></div>
+            </h2>
+            <figure class="sec_img title_right">
+                <div class="rectangle r6"></div>
+                <div class="si1 scrolled3"><img src="./img/slide3.png" alt=""></div>
+            </figure>
+            
+        </section>
+        <!-- //section6 -->
+	<!-- 	<footer>
+
+        </footer> -->
+		
+    </main>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    	<!-- <script>
+		$(window).scroll(function(){
+			var wScroll = $(window).scrollTop();
+			
+			var offset2=(wScroll - $(".s2").offset().top);
+			var offset3=(wScroll - $(".s3").offset().top);
+			var offset4=(wScroll - $(".s4").offset().top);
+			var offset5=(wScroll - $(".s5").offset().top);
+			var offset6=(wScroll - $(".s6").offset().top);
+			
+			
+			
+			if(wScroll >= $(".section.s2").offset().top - $(window).height() ){
+				$(".section.s2 .sec_img").css({'transform':'translate('+offset2+'px, 0px)'});
+                $(".section.s2 .rectangle.r2").css({'transform':'translate('+offset2+'px, 0px)'});
+
+			
+			}
+			if(wScroll >= $(".section.s3").offset().top - $(window).height() ){
+				$(".section.s3 .sec_img").css({'transform':'translate('+offset3+'px, 0px)'});
+			
+			}
+			if(wScroll >= $(".section.s4").offset().top - $(window).height() ){
+				$(".section.s4 .sec_img").css({'transform':'translate(0px, '+offset4+'px)'});
+                $(".section.s2 .rectangle.r4").css({'transform':'translate('+offset2+'px, 0px)'});
+			}
+			if(wScroll >= $(".section.s5").offset().top - $(window).height() ){
+				$(".section.s5 .sec_img").css({'transform':'translate(0px, '+offset5+'px)'});
+			
+			}
+			if(wScroll >= $(".section.s6").offset().top - $(window).height() ){
+				$(".section.s6 .sec_img").css({'transform':'translate(0px, '+offset6+'px)'});
+                $(".section.s2 .rectangle.r6").css({'transform':'translate('+offset2+'px, 0px)'});
+			}
+		
+		});
+        
+	
+	</script> -->
+	<script>
+        $(function(){
+            var h;
+            $(window).resize(function(){	
+                    h =	$(window).height();
+                   
+                $("section").height(h);
+               
+            });
+               
+            $(window).trigger('resize');
+            
+
+            
+            
+            $(window).on('scroll',function(){
+                var sct = $(window).scrollTop();
+         
+                for(var i = 0; i < 3; i++) {
+                    if(sct >= h * i  && sct < h * (i+1) ){
+                    $('ul li').removeClass('on'); 
+                    $('ul li').eq(i).addClass('on')  
+                }
+                
+                }
+                
+            });
+             
+            $("section").on('mousewheel',function(event, d){
+                    if(d > 0) {
+                        var prev = $(this).prev().offset().top;
+                        $("html, body").stop().animate({scrollTop:prev},1300,"easeOutCubic");
+                    }
+                    
+                    if(d < 0) {
+                        var next = $(this).next().offset().top;
+                        $("html, body").stop().animate({scrollTop:next},1300,"easeInCubic");
+                    } 
+                    
+                    return false;
+                });
+               
+            });
+    </script>
+
+
+
+  
+        
+    
+</body>
+
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+
+
+</html>
+
+
+
+
+
+
